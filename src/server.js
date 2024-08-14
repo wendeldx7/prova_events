@@ -10,6 +10,7 @@ import conn from "./config/conn.js";
 import "./models/eventoModel.js";
 import "./models/palestranteModel.js";
 import "./models/participanteModel.js";
+import "./models/inscricoesModel.js";
 
 import eventoRoutes from "./routes/eventoRouter.js";
 
