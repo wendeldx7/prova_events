@@ -41,6 +41,79 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "eventos/agenda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/eventos/agenda",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"agenda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eventos/criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/eventos/criar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"criar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/eventos/participantes/registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/eventos/participantes/registrar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"participantes",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/eventos/inscrever",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/eventos/inscrever",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"inscrever"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

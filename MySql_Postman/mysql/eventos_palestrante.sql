@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
--- Host: localhost    Database: palestras
+-- Host: localhost    Database: eventos
 -- ------------------------------------------------------
 -- Server version	8.0.36
 
@@ -16,32 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `eventos`
+-- Table structure for table `palestrante`
 --
 
-DROP TABLE IF EXISTS `eventos`;
+DROP TABLE IF EXISTS `palestrante`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `eventos` (
-  `id` varchar(60) NOT NULL,
-  `local` varchar(255) NOT NULL,
-  `horario` date NOT NULL,
-  `palestrante_id` varchar(60) DEFAULT NULL,
+CREATE TABLE `palestrante` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `expertise` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `palestrante_id` (`palestrante_id`),
-  CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`palestrante_id`) REFERENCES `palestrante` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `eventos`
+-- Dumping data for table `palestrante`
 --
 
-LOCK TABLES `eventos` WRITE;
-/*!40000 ALTER TABLE `eventos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `eventos` ENABLE KEYS */;
+LOCK TABLES `palestrante` WRITE;
+/*!40000 ALTER TABLE `palestrante` DISABLE KEYS */;
+INSERT INTO `palestrante` VALUES (1,'joao','ti','2024-08-14 12:37:38','2024-08-14 12:37:38'),(2,'joao','ti','2024-08-14 12:37:39','2024-08-14 12:37:39');
+/*!40000 ALTER TABLE `palestrante` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-12  8:27:46
+-- Dump completed on 2024-08-14 10:07:07
