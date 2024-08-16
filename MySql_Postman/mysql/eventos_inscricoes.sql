@@ -30,10 +30,8 @@ CREATE TABLE `inscricoes` (
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `participanteId` (`participanteId`),
-  KEY `eventoId` (`eventoId`),
-  CONSTRAINT `inscricoes_ibfk_1` FOREIGN KEY (`participanteId`) REFERENCES `participantes` (`id`),
-  CONSTRAINT `inscricoes_ibfk_2` FOREIGN KEY (`eventoId`) REFERENCES `eventos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `inscricoes_ibfk_1` FOREIGN KEY (`participanteId`) REFERENCES `participantes` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +40,7 @@ CREATE TABLE `inscricoes` (
 
 LOCK TABLES `inscricoes` WRITE;
 /*!40000 ALTER TABLE `inscricoes` DISABLE KEYS */;
-INSERT INTO `inscricoes` VALUES (2,1,1,'2024-08-14 12:38:20','2024-08-14 12:38:20');
+INSERT INTO `inscricoes` VALUES (1,1,1,'2024-08-16 12:58:34','2024-08-16 12:58:34');
 /*!40000 ALTER TABLE `inscricoes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-14 10:07:06
+-- Dump completed on 2024-08-16 10:14:27

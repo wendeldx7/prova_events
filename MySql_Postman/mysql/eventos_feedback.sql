@@ -16,32 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `participantes`
+-- Table structure for table `feedback`
 --
 
-DROP TABLE IF EXISTS `participantes`;
+DROP TABLE IF EXISTS `feedback`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `participantes` (
+CREATE TABLE `feedback` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) NOT NULL,
-  `idade` int NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `telefone` varchar(255) DEFAULT NULL,
+  `comentario` varchar(1000) NOT NULL,
+  `nota` int NOT NULL,
+  `participanteId` int NOT NULL,
+  `eventoId` int NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id`),
+  KEY `participanteId` (`participanteId`),
+  CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`participanteId`) REFERENCES `participantes` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `participantes`
+-- Dumping data for table `feedback`
 --
 
-LOCK TABLES `participantes` WRITE;
-/*!40000 ALTER TABLE `participantes` DISABLE KEYS */;
-INSERT INTO `participantes` VALUES (1,'asd',2,'varchar(255) not null@','varchar(255)','2024-08-16 12:58:27','2024-08-16 12:58:27');
-/*!40000 ALTER TABLE `participantes` ENABLE KEYS */;
+LOCK TABLES `feedback` WRITE;
+/*!40000 ALTER TABLE `feedback` DISABLE KEYS */;
+/*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -11,6 +11,7 @@ import "./models/eventoModel.js";
 import "./models/palestranteModel.js";
 import "./models/participanteModel.js";
 import "./models/inscricoesModel.js";
+import "./models/feedbackModel.js";
 
 import eventoRoutes from "./routes/eventoRouter.js";
 

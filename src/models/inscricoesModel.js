@@ -7,8 +7,7 @@ const tableIncricoes = /*sql*/ `
       eventoId int not null,
       created_at timestamp default current_timestamp,
       updated_at timestamp default current_timestamp on update current_timestamp,
-      foreign key (participanteId) references participantes(id),
-      foreign key (eventoId) references eventos(id)
+      foreign key (participanteId) references participantes(id)
     )
 `;
 conn.query(tableIncricoes, (err) => {
